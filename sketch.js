@@ -149,8 +149,8 @@ function preload() {
   visibilityMasks.medium = loadImage('/weather-visualization/visibility_medium.png');
   visibilityMasks.light = loadImage('/weather-visualization/visibility_light.png');
   
-  marlidesDisplayPro = loadFont('/weather-visualization/MarlideDisplayLight.ttf');
-  nimbusSansLight = loadFont('/weather-visualization/NimbusSansLight.ttf');
+  marlidesDisplayPro = loadFont('/weather-visualization/MarlideDisplayLight.woff');
+  nimbusSansLight = loadFont('/weather-visualization/NimbusSansLight.woff');
    rainSound = loadSound('/weather-visualization/rain.mp3');
   snowSound = loadSound('/weather-visualization/snow.mp3');
 }
