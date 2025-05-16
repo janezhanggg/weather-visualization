@@ -167,6 +167,7 @@ function setup() {
   topRightUI.style('display', 'flex');
   topRightUI.style('gap', '1px');
   topRightUI.style('z-index', '100');
+  musicButton.html('UNMUTE');
   /*
   if (bgMusic && !isMusicPlaying) {
   bgMusic.loop();
