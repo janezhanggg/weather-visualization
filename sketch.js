@@ -167,7 +167,6 @@ function setup() {
   topRightUI.style('display', 'flex');
   topRightUI.style('gap', '1px');
   topRightUI.style('z-index', '100');
-  musicButton.html('UNMUTE');
   /*
   if (bgMusic && !isMusicPlaying) {
   bgMusic.loop();
@@ -785,7 +784,7 @@ function createTempUnitButton() {
 }
 
 function createMusicButton() {
-  musicButton = createButton('MUTE');
+  musicButton = createButton('UNMUTE');
   musicButton.mousePressed(toggleMusic);
   musicButton.parent(topRightUI);
   musicButton.style('font-size', '14px');
