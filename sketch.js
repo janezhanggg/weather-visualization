@@ -135,24 +135,24 @@ let city = 'Beijing';
 let units = 'metric';
 
 function preload() {
-  uvOrbImg = loadImage('/weather_assets.png');
-  cloudImg = loadImage('/cloud_assets.png');
-  bgMusic = loadSound('/background_sound.mp3');
-  windCompass = loadImage('/wind_compass.png');
-  windArrows.no = loadImage('/no_wind.png');
-  windArrows.mild = loadImage('/mild_wind.png');
-  windArrows.moderate = loadImage('/moderate_wind.png');
-  windArrows.strong = loadImage('/strong_wind.png');
+  uvOrbImg = loadImage('/weather-visualization/weather_assets.png');
+  cloudImg = loadImage('/weather-visualization/cloud_assets.png');
+  bgMusic = loadSound('/weather-visualization/background_sound.mp3');
+  windCompass = loadImage('/weather-visualization/wind_compass.png');
+  windArrows.no = loadImage('/weather-visualization/no_wind.png');
+  windArrows.mild = loadImage('/weather-visualization/mild_wind.png');
+  windArrows.moderate = loadImage('/weather-visualization/moderate_wind.png');
+  windArrows.strong = loadImage('/weather-visualization/strong_wind.png');
 
-  visibilityMasks.none = loadImage('/visibility_none.png');
-  visibilityMasks.low = loadImage('/visibility_low.png');
-  visibilityMasks.medium = loadImage('/visibility_medium.png');
-  visibilityMasks.light = loadImage('/visibility_light.png');
+  visibilityMasks.none = loadImage('/weather-visualization/visibility_none.png');
+  visibilityMasks.low = loadImage('/weather-visualization/visibility_low.png');
+  visibilityMasks.medium = loadImage('/weather-visualization/visibility_medium.png');
+  visibilityMasks.light = loadImage('/weather-visualization/visibility_light.png');
   
-  marlidesDisplayPro = loadFont('/MarlideDisplayLight.ttf');
-  nimbusSansLight = loadFont('/NimbusSansLight.ttf');
-   rainSound = loadSound('/rain.mp3');
-  snowSound = loadSound('/snow.mp3');
+  marlidesDisplayPro = loadFont('/weather-visualization/MarlideDisplayLight.ttf');
+  nimbusSansLight = loadFont('/weather-visualization/NimbusSansLight.ttf');
+   rainSound = loadSound('/weather-visualization/rain.mp3');
+  snowSound = loadSound('/weather-visualization/snow.mp3');
 }
 
 let topRightUI;
