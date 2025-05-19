@@ -263,9 +263,9 @@ function drawLeftPanel() {
   textSize(14);
   text(
   "1. Enter a city name in the input field\n" +
-  "2. Click 'Get Weather' to load data\n" +
+  "2. Click \"Get Weather\" to load data\n" +
   "3. Click the day buttons at bottom to navigate\n" +
-  "4. Click the captions button for labeled weather info\n" +
+  "4. Click the labels button for labeled weather info\n" +
   "5. Click the mute button to toggle background music\n\n",
   22, 150
 );
