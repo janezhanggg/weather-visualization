@@ -17,6 +17,10 @@ let leftPanelContent = {
   precipitation: { value: 0, unit: "mm" }
 };
 
+let leftPanelScrollY = 0;
+let leftPanelContentHeight = 0;
+let leftPanelMaxScroll = 0;
+
 let weatherData = null;
 let forecastData = null;
 let currentDay = 0;
@@ -247,6 +251,20 @@ function drawLeftPanel() {
   fill(255, 255, 255, 150);
   noStroke();
   rect(0, 0, leftPanelWidth, height);
+
+  // Define scrollable area
+  let scrollAreaTop = 60;
+  let scrollAreaBottom = height - 60;
+  let scrollAreaHeight = scrollAreaBottom - scrollAreaTop;
+
+  // Start clipping to prevent overflow
+  push();
+  clip(() => {
+    rect(0, scrollAreaTop, leftPanelWidth, scrollAreaHeight);
+  });
+
+  // Apply scroll offset
+  translate(0, scrollAreaTop + leftPanelScrollY);
   
   // Title
   textFont(marlidesDisplayPro);
@@ -500,6 +518,19 @@ if (speedInMetersPerSecond <= 3.0) {
   ? nf(speed, 0, 1) + " m/s"
   : nf(speed * 2.23694, 0, 1) + " mph";
 text(speedDisplay, x + 1, y - 3);
+
+  leftPanelContentHeight = yPos;
+  leftPanelMaxScroll = max(0, leftPanelContentHeight - scrollAreaHeight);
+
+  pop(); // End clipping and translation
+}
+
+function mouseWheel(event) {
+  if (mouseX < leftPanelWidth && leftPanelWidth > 0) {
+    leftPanelScrollY += event.delta * 20;
+    leftPanelScrollY = constrain(leftPanelScrollY, -leftPanelMaxScroll, 0);
+    return false;
+  }
 }
 
 function createLabelsButton() {
